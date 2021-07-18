@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/TomCoupe/electron-music-player/issues"
   },
-  "homepage": "https://github.com/TomCoupe/electron-music-player#readme"
+  "homepage": "https://github.com/TomCoupe/electron-music-player#readme",
+  "devDependencies": {
+    "electron": "^13.1.7"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "vue": "^2.6.14"
+  }
 }
