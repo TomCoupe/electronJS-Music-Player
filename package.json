@@ -2,9 +2,11 @@
   "name": "electronjs",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "build": "tsc",
+    "dev": "tsc -w",
+    "lint": "eslint -c .eslintrc --ext .ts ./src",
+    "start": "npm run build && electron ./dist/main.js"
   },
   "repository": {
     "type": "git",
@@ -17,12 +19,19 @@
   },
   "homepage": "https://github.com/TomCoupe/electron-music-player#readme",
   "devDependencies": {
-    "electron": "^13.1.7"
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "@typescript-eslint/parser": "^4.28.3",
+    "electron": "^13.1.7",
+    "eslint": "^7.30.0",
+    "typescript": "^4.3.5"
   },
   "dependencies": {
     "@popperjs/core": "^2.9.2",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.2",
-    "vue": "^2.6.14"
+    "electron-context-menu": "^3.1.1",
+    "harlem-shake": "^1.0.3",
+    "vue": "^2.6.14",
+    "webpack-dev-server": "^3.11.2"
   }
 }
