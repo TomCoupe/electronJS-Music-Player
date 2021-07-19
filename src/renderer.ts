@@ -5,7 +5,7 @@
 // Use preload.js to selectively enable features
 // needed in the renderer process.
 
-require('./bootstrap');
+// require('./bootstrap');
 window.Vue = require('vue');
 
 Vue.component('tester', require('./components/Tester.vue').default);

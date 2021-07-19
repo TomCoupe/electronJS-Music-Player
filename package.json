@@ -30,7 +30,6 @@
     "axios": "^0.21.1",
     "bootstrap": "^5.0.2",
     "electron-context-menu": "^3.1.1",
-    "harlem-shake": "^1.0.3",
     "vue": "^2.6.14",
     "webpack-dev-server": "^3.11.2"
   }
