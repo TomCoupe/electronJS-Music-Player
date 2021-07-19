@@ -42,7 +42,10 @@ app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
 })
 
-contextMenu({
+
+//code needed to enable inspect element for the application
+
+/**contextMenu({
 	prepend: (defaultActions, parameters, browserWindow) => [
 		{
 			label: 'Rainbow',
@@ -57,7 +60,7 @@ contextMenu({
 				shell.openExternal(`https://google.com/search?q=${encodeURIComponent(parameters.selectionText)}`);
 			}
 		}
-	]
+    ]
 });
 
 let mainWindow;
@@ -69,7 +72,7 @@ let mainWindow;
 			spellcheck: true
 		}
 	});
-})();
+})();**/
 
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.
+
+
