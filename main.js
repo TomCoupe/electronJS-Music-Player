@@ -2,7 +2,6 @@
 
 // Modules to control application life and create native browser window
 const { app, BrowserWindow } = require('electron')
-const contextMenu = require('electron-context-menu');
 const path = require('path')
 
 function createWindow () {
@@ -19,7 +18,7 @@ function createWindow () {
   mainWindow.loadFile('index.html')
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
@@ -43,36 +42,7 @@ app.on('window-all-closed', function () {
 })
 
 
-//code needed to enable inspect element for the application
-
-/**contextMenu({
-	prepend: (defaultActions, parameters, browserWindow) => [
-		{
-			label: 'Rainbow',
-			// Only show it when right-clicking images
-			visible: parameters.mediaType === 'image'
-		},
-		{
-			label: 'Search Google for “{selection}”',
-			// Only show it when right-clicking text
-			visible: parameters.selectionText.trim().length > 0,
-			click: () => {
-				shell.openExternal(`https://google.com/search?q=${encodeURIComponent(parameters.selectionText)}`);
-			}
-		}
-    ]
-});
-
-let mainWindow;
-(async () => {
-	await app.whenReady();
-
-	mainWindow = new BrowserWindow({
-		webPreferences: {
-			spellcheck: true
-		}
-	});
-})();**/
+//code needed to enable inspect e
 
 
 
